@@ -3,6 +3,7 @@ const gulp = require('gulp'),
       less = require('gulp-less'),
       autoprefixer = require('gulp-autoprefixer'),
       concat = require('gulp-concat'),
+      minify = require('gulp-minify'),
       bsync = require('browser-sync').create();
 
 
@@ -11,6 +12,7 @@ gulp.task('less', () => {
     .pipe(less())
     .pipe(concat('main.css'))
     .pipe(autoprefixer())
+    .pipe(minify())
     .pipe(gulp.dest(config.less.dest))
     .pipe(bsync.stream());
 });

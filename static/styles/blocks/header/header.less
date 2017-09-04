@@ -1,5 +1,37 @@
 .header {
-    background-color: red;
-    width: 300px;
-    height: 40px;
+    margin: 0 auto;
+    width: 1366px;
+    background-color: #E3EDEF;
+
+    &__menu {
+        padding: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 30px;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.8);
+
+    }
+
+    &__contacts {
+        margin-left: auto;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        &-item {
+            padding: 0 15px;
+            color: #222;
+            transition: color .2s ease;
+            cursor: pointer;
+            
+            &:hover {
+                color: #10C9C3;
+            }
+        }
+    }
 }
